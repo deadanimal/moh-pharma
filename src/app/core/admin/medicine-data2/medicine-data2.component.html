@@ -1,0 +1,324 @@
+<div class="header pb-6">
+    <div class=" container-fluid">
+        <div class=" header-body">
+            <div class=" row align-items-center py-4">
+                <div class=" col-lg-6 col-7">
+                    <h6 class=" h2 text-dark d-inline-block mb-0">Maklumat Harga Ubat 2</h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-pills text-dark"> </i> </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5 class="h3 mb-0">Jadual Kutipan</h5>
+                        </div>
+                        <div class="col text-right">
+                            <button class="btn btn-primary btn-sm" type="button" (click)="openModal(modalAdd)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Bil</th>
+                                <th scope="col">Jenis Ubat</th>
+                                <th scope="col">Nama Ubat</th>
+                                <th scope="col">Jenama Ubat</th>
+                                <th scope="col">Kategori Ubat</th>
+                                <th scope="col">Harga Borong</th>
+                                <th scope="col">Negara Rujukan</th>
+                                <th scope="col">Harga Maksimum</th>
+                                <th scope="col">Tarikh Mesyuarat</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">1.</th>
+                                <td>OTC</td>
+                                <td>Acetylcysteine 100mg</td>
+                                <td>MUCIL 100</td>
+                                <td>Harga Kawalan</td>
+                                <td>RM315.20</td>
+                                <td>Korea, Africa, China, England</td>
+                                <td>RM350.00</td>
+                                <td>15 Mac 2020</td>
+                                <td>
+                                    <button class="btn btn-icon btn-2 btn-primary btn-sm" type="button"  (click)="openModal(modalEdit)">
+                                        <span class="btn-inner--icon"><i class="fas fa-pen-square"></i></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.</th>
+                                <td>OTC</td>
+                                <td>Acetylcysteine 600mg</td>
+                                <td>Stenac</td>
+                                <td>Harga Kawalan</td>
+                                <td>RM102.20</td>
+                                <td>England</td>
+                                <td>RM150.60</td>
+                                <td>15 Mac 2020</td>
+                                <td>
+                                    <button class="btn btn-icon btn-2 btn-primary btn-sm" type="button"  (click)="openModal(modalEdit)">
+                                        <span class="btn-inner--icon"><i class="fas fa-pen-square"></i></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #modalAdd>
+    <div class="modal-header bg-primary align-items-center">
+        <h6 class="modal-title text-white" id="modal-title-default">
+            Maklumat Harga Ubat
+        </h6>
+
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button" (click)="modal.hide()">
+            <span aria-hidden="true" class="m-0 text-white"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Jenis Ubat</label>
+                    <select class="form-control custom-select">
+                        <option selected hidden>Sila pilih jenis ubat</option>
+                        <option>Harga kawalan</option>
+                        <option>Harga bukan kawalan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Nama Ubat</label>
+                    <input class="form-control" placeholder="Masukkan nama ubat">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Kategori Ubat</label>
+                    <select class="form-control custom-select">
+                        <option selected hidden>Sila pilih kategori ubat</option>
+                        <option>Harga kawalan</option>
+                        <option>Harga bukan kawalan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Borong</label>
+                    <input class="form-control" placeholder="Masukkan harga borong">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Negara Rujukan</label>
+                    <input class="form-control" placeholder="Masukkan negara rujukan">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Penanda Aras ERP</label>
+                    <input class="form-control" placeholder="Masukkan harga penanda aras ERP">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Maklumat Rundingan</label>
+                    <input class="form-control" placeholder="Masukkan maklumat rundingan">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Borong Maksimum</label>
+                    <input class="form-control" placeholder="Masukkan harga borong maksimum">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga tokokan</label>
+                    <input class="form-control" placeholder="Masukkan harga tokokan">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Maksimum Pengguna</label>
+                    <input class="form-control" placeholder="Masukkan harga maksimum pengguna">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Bilangan Panel</label>
+                    <input class="form-control" placeholder="Masukkan bilangan panel">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Tarikh Mesyuarat Panel</label>
+                    <input class="form-control" placeholder="" type="date">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-primary" type="button" (click)="modal.hide()">
+            Tambah
+        </button>
+
+        <button class=" btn btn-link ml-auto" data-dismiss="modal" type="button" (click)="modal.hide()">
+            Batal
+        </button>
+    </div>
+</ng-template>
+
+<ng-template #modalEdit>
+    <div class="modal-header bg-primary align-items-center">
+        <h6 class="modal-title text-white" id="modal-title-default">
+            Suntingan
+        </h6>
+
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button" (click)="modal.hide()">
+            <span aria-hidden="true" class="m-0 text-white"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Jenis Ubat</label>
+                    <select class="form-control custom-select">
+                        <option selected hidden>Sila pilih jenis ubat</option>
+                        <option>Harga kawalan</option>
+                        <option>Harga bukan kawalan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Nama Ubat</label>
+                    <input class="form-control" placeholder="Masukkan nama ubat">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Kategori Ubat</label>
+                    <select class="form-control custom-select">
+                        <option selected hidden>Sila pilih kategori ubat</option>
+                        <option>Harga kawalan</option>
+                        <option>Harga bukan kawalan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Borong</label>
+                    <input class="form-control" placeholder="Masukkan harga borong">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Negara Rujukan</label>
+                    <input class="form-control" placeholder="Masukkan negara rujukan">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Penanda Aras ERP</label>
+                    <input class="form-control" placeholder="Masukkan harga penanda aras ERP">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Maklumat Rundingan</label>
+                    <input class="form-control" placeholder="Masukkan maklumat rundingan">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Borong Maksimum</label>
+                    <input class="form-control" placeholder="Masukkan harga borong maksimum">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga tokokan</label>
+                    <input class="form-control" placeholder="Masukkan harga tokokan">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Maksimum Pengguna</label>
+                    <input class="form-control" placeholder="Masukkan harga maksimum pengguna">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Bilangan Panel</label>
+                    <input class="form-control" placeholder="Masukkan bilangan panel">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Tarikh Mesyuarat Panel</label>
+                    <input class="form-control" placeholder="" type="date">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-primary" type="button" (click)="modal.hide()">
+            Sunting
+        </button>
+
+        <button class=" btn btn-link ml-auto" data-dismiss="modal" type="button" (click)="modal.hide()">
+            Batal
+        </button>
+    </div>
+</ng-template>

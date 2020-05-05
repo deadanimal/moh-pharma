@@ -1,0 +1,225 @@
+<div class="header pb-6">
+    <div class=" container-fluid">
+        <div class=" header-body">
+            <div class=" row align-items-center py-4">
+                <div class=" col-lg-6 col-7">
+                    <h6 class=" h2 text-dark d-inline-block mb-0">Pengurusan Pengguna</h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-pills text-dark"> </i> </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5 class="h3 mb-0">Senarai</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Bil</th>
+                                <th scope="col">Modul</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">1.</th>
+                                <td>Data Ubat 1</td>
+                                <td class="text-right">
+                                    <button class="btn btn-icon btn-2 btn-primary btn-sm" type="button"  (click)="openModal(modalEdit)">
+                                        <span class="btn-inner--icon"><i class="fas fa-pen-square"></i></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.</th>
+                                <td>Data Ubat 2</td>
+                                <td class="text-right">
+                                    <button class="btn btn-icon btn-2 btn-primary btn-sm" type="button"  (click)="openModal(modalEdit)">
+                                        <span class="btn-inner--icon"><i class="fas fa-pen-square"></i></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #modalEdit>
+    <div class="modal-header bg-primary align-items-center">
+        <h6 class="modal-title text-white" id="modal-title-default">
+            Sunting
+        </h6>
+
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button" (click)="modal.hide()">
+            <span aria-hidden="true" class="m-0 text-white"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body p-0">
+        <div class="row my-2 mr-2">
+            <div class="col text-right">
+                <button type="button" class="btn btn-primary btn-sm" (click)="openModal(modalAddUser)">Tambah</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Bil</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Papar</th>
+                        <th scope="col">Ubah</th>
+                        <th scope="col">Tambah</th>
+                        <th scope="col">Kemaskini</th>
+                    </tr>
+                </thead>
+                <tbody class="list">
+                    <tr>
+                        <th scope="row">1.</th>
+                        <td>Pengguna 1</td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2.</th>
+                        <td>Pengguna 2</td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3.</th>
+                        <td>Pengguna 3</td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="custom-toggle">
+                                <input type="checkbox" checked="">
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-primary" type="button" (click)="modal.hide()">
+            Tambah
+        </button>
+
+        <button class=" btn btn-link ml-auto" data-dismiss="modal" type="button" (click)="modal.hide()">
+            Batal
+        </button>
+    </div>
+</ng-template>
+
+<ng-template #modalAddUser>
+    <div class="modal-header bg-primary align-items-center">
+        <h6 class="modal-title text-white" id="modal-title-default">
+            Pengguna Baru
+        </h6>
+
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button" (click)="modal.hide()">
+            <span aria-hidden="true" class="m-0 text-white"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="form-group">
+            <label class="form-group">Nama Pengguna</label>
+            <input class="form-control" placeholder="Masukkan nama pengguna">
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-primary" type="button" (click)="modal.hide()">
+            Sunting
+        </button>
+
+        <button class=" btn btn-link ml-auto" data-dismiss="modal" type="button" (click)="modal.hide()">
+            Batal
+        </button>
+    </div>
+</ng-template>

@@ -1,0 +1,165 @@
+<div class="header pb-6">
+    <div class=" container-fluid">
+        <div class=" header-body">
+            <div class=" row align-items-center py-4">
+                <div class=" col-lg-6 col-7">
+                    <h6 class=" h2 text-dark d-inline-block mb-0">Maklumat Harga Ubat 1</h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-pills text-dark"> </i> </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5 class="h3 mb-0">Jadual Kutipan</h5>
+                        </div>
+                        <div class="col text-right">
+                            <button class="btn btn-primary btn-sm" type="button" (click)="openModal(modalAdd)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Bil</th>
+                                <th scope="col">Jenis Ubat</th>
+                                <th scope="col">Nama Ubat</th>
+                                <th scope="col">Jenama Ubat</th>
+                                <th scope="col">Kategori Ubat</th>
+                                <th scope="col">Status Pendaftaran</th>
+                                <th scope="col">Status Pek Bungkusan</th>
+                                <th scope="col">Unit</th>
+                                <th scope="col">Harga/Unit</th>
+                                <th scope="col">Tarikh</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">1.</th>
+                                <td>OTC</td>
+                                <td>Acetylcysteine 100mg</td>
+                                <td>MUCIL 100</td>
+                                <td>Harga Kawalan</td>
+                                <td>Aktif</td>
+                                <td>Aktif</td>
+                                <td>Sachet</td>
+                                <td>RM0.89</td>
+                                <td>15 Mac 2020</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.</th>
+                                <td>OTC</td>
+                                <td>Acetylcysteine 600mg</td>
+                                <td>MUCIL 100</td>
+                                <td>Harga Kawalan</td>
+                                <td>Aktif</td>
+                                <td>Aktif</td>
+                                <td>Tablet</td>
+                                <td>RM1.60</td>
+                                <td>15 Mac 2020</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #modalAdd>
+    <div class="modal-header bg-primary align-items-center">
+        <h6 class="modal-title text-white" id="modal-title-default">
+            Maklumat Harga Ubat
+        </h6>
+
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button" (click)="modal.hide()">
+            <span aria-hidden="true" class="m-0 text-white"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="form-group">
+            <label class="form-control-label">Jenis Ubat</label>
+            <select class="form-control custom-select">
+                <option selected hidden>Sila pilih jenis ubat</option>
+                <option>Harga kawalan</option>
+                <option>Harga bukan kawalan</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Nama Ubat</label>
+            <input class="form-control" placeholder="Masukkan nama ubat">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Kategori Ubat</label>
+            <select class="form-control custom-select">
+                <option selected hidden>Sila pilih kategori ubat</option>
+                <option>Harga kawalan</option>
+                <option>Harga bukan kawalan</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Status Pendaftaran</label>
+            <br>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">Aktif</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Tidak Aktif</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Status Pek Bungkusan</label>
+            <br>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline21" name="customRadioInline2" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline21">Aktif</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline22" name="customRadioInline2" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline22">Tidak Aktif</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Unit</label>
+                    <input class="form-control" placeholder="Masukkan unit">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Harga Per Unit</label>
+                    <input class="form-control" placeholder="Masukkan harga per unit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-primary" type="button" (click)="modal.hide()">
+            Tambah
+        </button>
+
+        <button class=" btn btn-link ml-auto" data-dismiss="modal" type="button" (click)="modal.hide()">
+            Batal
+        </button>
+    </div>
+</ng-template>

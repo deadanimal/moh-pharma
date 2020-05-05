@@ -1,0 +1,232 @@
+<div class="header pb-6">
+    <div class=" container-fluid">
+        <div class=" header-body">
+            <div class=" row align-items-center py-4">
+                <div class=" col-lg-6 col-7">
+                    <h6 class=" h2 text-dark d-inline-block mb-0">Penyelenggaraan</h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-pills text-dark"> </i> </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col">
+            <tabset type="pills" class="nav-fill flex-column flex-md-row">
+                <tab>
+                    <ng-template tabHeading>
+                        Jadual Terkini
+                    </ng-template>
+                    <div class="card mt-2">
+                        <div class="card-header bg-secondary">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="h3 mb-0">Analisis</h5>
+                                </div>
+                                <div class="col text-right">
+                                    <button class="btn btn-primary btn-sm" type="button" (click)="openModal(modalNewSchedule)">Tambah</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-flush">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Bil</th>
+                                        <th scope="col">Tajuk</th>
+                                        <th scope="col">Kategori Ubat</th>
+                                        <th scope="col">Dari</th>
+                                        <th scope="col">Hingga</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="list">
+                                    <tr>
+                                        <th scope="row">1.</th>
+                                        <td>Tajuk 1</td>
+                                        <td>Harga Kawalan</td>
+                                        <td>1 Mac 2020</td>
+                                        <td>15 Mac 2020</td>
+                                        <td class="text-right">
+                                            <button class="btn btn-icon btn-2 btn-warning btn-sm" type="button" (click)="delete()">
+                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2.</th>
+                                        <td>Tajuk 2</td>
+                                        <td>Harga Bukan Kawalan</td>
+                                        <td>1 Mac 2020</td>
+                                        <td>15 Mac 2020</td>
+                                        <td class="text-right">
+                                            <button class="btn btn-icon btn-2 btn-warning btn-sm" type="button" (click)="delete()">
+                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </tab>
+                <tab>
+                    <ng-template tabHeading>
+                        Jadual Selesai
+                    </ng-template>
+                    <div class="card mt-2">
+                        <div class="card-header bg-secondary">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="h3 mb-0">Analisis</h5>
+                                </div>
+                                <div class="col text-right">
+                                    <button class="btn btn-primary btn-sm" type="button" (click)="openModal(modalNewSchedule)">Tambah</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-flush">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Bil</th>
+                                        <th scope="col">Tajuk</th>
+                                        <th scope="col">Kategori Ubat</th>
+                                        <th scope="col">Dari</th>
+                                        <th scope="col">Hingga</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="list">
+                                    <tr>
+                                        <th scope="row">1.</th>
+                                        <td>Tajuk 1</td>
+                                        <td>Harga Kawalan</td>
+                                        <td>1 Mac 2020</td>
+                                        <td>15 Mac 2020</td>
+                                        <td class="text-right">
+                                            <button class="btn btn-icon btn-2 btn-primary btn-sm" type="button" (click)="openModal(modalEdit)">
+                                                <span class="btn-inner--icon"><i class="fas fa-paste"></i></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2.</th>
+                                        <td>Tajuk 2</td>
+                                        <td>Harga Bukan Kawalan</td>
+                                        <td>1 Mac 2020</td>
+                                        <td>15 Mac 2020</td>
+                                        <td class="text-right">
+                                            <button class="btn btn-icon btn-2 btn-primary btn-sm" type="button" (click)="openModal(modalEdit)">
+                                                <span class="btn-inner--icon"><i class="fas fa-paste"></i></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>
+
+<ng-template #modalNewSchedule>
+    <div class="modal-header bg-primary align-items-center">
+        <h6 class="modal-title text-white" id="modal-title-default">
+            Penjadualan Kutipan Harga Baru
+        </h6>
+
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button" (click)="modal.hide()">
+            <span aria-hidden="true" class="m-0 text-white"> × </span>
+        </button>
+    </div>
+
+    <div class=" modal-body">
+        <div class="form-group">
+            <label class="form-control-label">Tajuk</label>
+            <input class="form-control" placeholder="Masukkan tajuk">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Kategori Ubat</label>
+            <select class="form-control custom-select">
+                <option selected hidden>Sila pilih kategori ubat</option>
+                <option>Harga kawalan</option>
+                <option>Harga bukan kawalan</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Tarikh (Dari)</label>
+            <input class="form-control" placeholder="" type="date">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Tarikh (Hingga)</label>
+            <input class="form-control" placeholder="" type="date">
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-primary" type="button" (click)="modal.hide()">
+            Simpan
+        </button>
+
+        <button class=" btn btn-link ml-auto" data-dismiss="modal" type="button" (click)="modal.hide()">
+            Batal
+        </button>
+    </div>
+</ng-template>
+
+<ng-template #modalEdit>
+    <div class="modal-header bg-primary align-items-center">
+        <h6 class="modal-title text-white" id="modal-title-default">
+            Suntingan
+        </h6>
+
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button" (click)="modal.hide()">
+            <span aria-hidden="true" class="m-0 text-white"> × </span>
+        </button>
+    </div>
+
+    <div class=" modal-body">
+        <div class="form-group">
+            <label class="form-control-label">Tajuk</label>
+            <input class="form-control" placeholder="Masukkan tajuk">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Kategori Ubat</label>
+            <select class="form-control custom-select">
+                <option selected hidden>Sila pilih kategori ubat</option>
+                <option>Harga kawalan</option>
+                <option>Harga bukan kawalan</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Tarikh (Dari)</label>
+            <input class="form-control" placeholder="" type="date">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Tarikh (Hingga)</label>
+            <input class="form-control" placeholder="" type="date">
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-primary" type="button" (click)="modal.hide()">
+            Simpan
+        </button>
+
+        <button class=" btn btn-link ml-auto" data-dismiss="modal" type="button" (click)="modal.hide()">
+            Batal
+        </button>
+    </div>
+</ng-template>
